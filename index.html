@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD</title>
+</head>
+<body>
+  <center> <p>Hello this a sample web page to show about CI/CD</p></center> 
+  <h1>ENter yoour details</h1>
+  <form >
+    <div>
+        <label for="name">
+             Name : 
+        </label>
+        <input type="text" name="name" id="Name" required placeholder="Enter yout Name">
+    </div>
+    <div>
+        <label for="email">
+             Email : 
+        </label>
+        <input type="email" name="email" id="email" required placeholder="Enter your EMail">
+    </div>
+    <div>
+        <label for="pass">
+             Password : 
+        </label>
+        <input type="password" name="pass" id="pass" required placeholder="Enter your password">
+    </div>
+    <div>
+        <label for="pass_c">
+             Conform Password : 
+        </label>
+        <input type="password" name="pass_c" id="pass_c" placeholder="Enter your conform password" required>
+    </div>
+
+
+
+
+        <button onclick="HandleClick(event)">Submit</button>
+  </form>
+
+    <script>
+        function HandleClick(event){
+            event.preventDefault();
+            const pass = document.getElementById("pass").value;
+            const c_pass = document.getElementById("pass_c").value
+            if(pass === c_pass){
+                alert("You are registered...")
+                window.location.reload()
+            }else{
+                alert("password and confrom password does not matched...")
+            }
+        }
+    </script>
+</body>
+</html>
